@@ -6,15 +6,7 @@ on:
       - main
 
 # Here the environment variable is declared in workflow level
-env:
-  # Replace with your Orchestrator Values 
-  PROJECT_NAME: uipath.github.action                         
-  PROJECT_FOLDER: ${{ github.action_path }}
-  ORCH_URL: https://cloud.uipath.com/pathrudu/SkillRPA
-  ORCH_TENANT: ${{ secrets.UIPATHTENANTNAME }}
-  ORCH_CLIENT_ID: ${{ secrets.UIPATHCLIENTID }}
-  ORCH_USER_KEY: ${{ secrets.UIPATHUSERKEY }}
-  ORCH_ACC_NAME: ${{ secrets.UIPATHACCOUNTNAME }}
+
 
 jobs:
   print-details:
@@ -44,6 +36,7 @@ jobs:
     # You should be able to run on windows 2019 or windows latest
     needs: cleaner
     runs-on: windows-latest
+    
     steps: 
       - name: Check out repository code
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -61,6 +54,16 @@ jobs:
   publish-uipath-nuget-package:
     needs: build-uipath-nuget-package
     runs-on: windows-latest
+    environment: Dev
+    env:
+      # Replace with your Orchestrator Values 
+      PROJECT_NAME: uipath.github.action                         
+      PROJECT_FOLDER: ${{ github.action_path }}
+      ORCH_URL: https://cloud.uipath.com/pathrudu/SkillRPA
+      ORCH_TENANT: ${{ secrets.UIPATHTENANTNAME }}
+      ORCH_CLIENT_ID: ${{ secrets.UIPATHCLIENTID }}
+      ORCH_USER_KEY: ${{ secrets.UIPATHUSERKEY }}
+      ORCH_ACC_NAME: ${{ secrets.UIPATHACCOUNTNAME }}
     steps: 
       - name: Download UiPath Artifacts
         uses: actions/download-artifact@v2
