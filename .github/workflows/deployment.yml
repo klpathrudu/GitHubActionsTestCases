@@ -60,10 +60,10 @@ jobs:
       PROJECT_NAME: uipath.github.action                         
       PROJECT_FOLDER: ${{ github.action_path }}
       ORCH_URL: https://cloud.uipath.com/pathrudu/SkillRPA
-      ORCH_TENANT: ${{ secrets.UIPATHTENANTNAME }}
-      ORCH_CLIENT_ID: ${{ secrets.UIPATHCLIENTID }}
-      ORCH_USER_KEY: ${{ secrets.UIPATHUSERKEY }}
-      ORCH_ACC_NAME: ${{ secrets.UIPATHACCOUNTNAME }}
+      ORCH_TENANT: SkillRPA
+      ORCH_CLIENT_ID: 8DEv1AMNXczW3y4U15LL3jYf62jK93n5
+      ORCH_USER_KEY: 3PItaEPLy0O8Rlgvvgz3bmZBG4M3VgypgjWSkZkJOpVC4
+      ORCH_ACC_NAME: pathrudu
     steps: 
       - name: Download UiPath Artifacts
         uses: actions/download-artifact@v2
