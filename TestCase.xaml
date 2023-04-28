@@ -61,6 +61,6 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:Comment sap:VirtualizedContainerService.HintSize="388,56.666666666666664" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Blank Test Case" />
-    <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="False" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
+    <uta:VerifyExpression AlternativeVerificationTitle="{x:Null}" KeepScreenshots="{x:Null}" OutputMessageFormat="{x:Null}" Result="{x:Null}" ScreenshotsPath="{x:Null}" ContinueOnFailure="True" DisplayName="Verify Expression" Expression="True" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="VerifyExpression_1" TakeScreenshotInCaseOfFailingAssertion="False" TakeScreenshotInCaseOfSucceedingAssertion="False" />
   </Sequence>
 </Activity>
