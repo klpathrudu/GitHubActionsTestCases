@@ -175,8 +175,8 @@ if($language -ne ""){
     $ParamList.Add($language)
 }
 if($version -ne ""){
-    $ParamList.Add("-v")
-    $ParamList.Add($version)
+    $ParamList.Add("-v1.0.")
+    $ParamList.Add((Get-Date).ToString("ddMMyyyyHHmmssfff"))
 }
 if($PSBoundParameters.ContainsKey('autoVersion')) {
     $ParamList.Add("--autoVersion")
