@@ -77,7 +77,7 @@ Param (
 	
 	[string] $libraryOrchestratorFolder = "", #Optional, useful only for libraries) The Orchestrator folder (organization unit).
 	[string] $language = "", #The orchestrator language.  
-    [string] $version = "", #Package version.
+    [string] $version = (Get-Date).ToString("yyyy:MM:dd"), #Package version.
     [switch] $autoVersion, #Auto-generate package version.
     [string] $outputType = "", #Force the output to a specific type.  
     [string] $disableTelemetry = "" #Disable telemetry data.   
